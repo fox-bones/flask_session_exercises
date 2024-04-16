@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Exercises</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Session Exercises</h1>
+    <section class="centered">
+        <form action="/" method="POST">
+            <h2>Guessing game.</h2>
+            <label>Guess a number between {{session['low']}} and {{session['high']}}: <input type="number" name="guess" required/></label>
+            <section class="centered">
+                <button>Submit</button>
+            </section>
+        </form>
+    </section>
+    <hr>
+    <p class="feedback">{{message}}</p>
+</body>
+</html>
